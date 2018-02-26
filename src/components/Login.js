@@ -19,7 +19,7 @@ class Login extends Component {
       <div className="container-fluid">
         <div className="row">
           <div className="col-sm-12 jumbotron" style={{marginTop:'-20px'}}>
-            <h1>DIARY | { new Date().getFullYear() }</h1>
+            <h1>PLANT | { new Date().getFullYear() }</h1>
             <h2>Login with your favourite <b>Social Network</b> to start</h2>
           </div>
           <div className="col-sm-4 text-center">
@@ -31,10 +31,6 @@ class Login extends Component {
           <div className="col-sm-4 text-center">
             <button className="btn btn-success btn-lgn"
             onClick={this.props.twitterLogin}>Login with Twitter</button>
-          </div>
-          <div className="col-sm-4 text-center">
-            <button className="btn btn-primary btn-lgn"
-            onClick={this.props.twitterLogin}>Login with Facebook</button>
           </div>
         </div>
       </div>
