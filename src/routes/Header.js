@@ -26,21 +26,24 @@ class  Header extends Component {
             </Link>
           </div>
           <div className="collapse navbar-collapse" id="myNavbar">
-            <ul className="nav navbar-nav navbar-right">
+            
             {
 
               this.props.user  === null ? (
+                <ul className="nav navbar-nav navbar-right">
                 <li>
-                  z
                   <Link to="/login">login</Link>
                 </li>
+                </ul>
               ) : (
-                <li>
-                  <Link to="/" onClick={() => this.props.logout()}><img className="avtar img-circle" width="24px" height="24" src={this.props.user.photoURL}/><span> - logout</span></Link>
-                </li>
+                <ul className="nav navbar-nav navbar-right">
+                <li className="breadcrumb-item"><Link to="/">Surveillance</Link></li>
+                <li className="breadcrumb-item"><Link to="/">How</Link></li>
+                <li className="breadcrumb-item"><Link to="/" onClick={() => this.props.logout()}><span>Logout  </span><img className="avtar img-circle" width="24px" height="24" src={this.props.user.photoURL}/></Link></li>
+                </ul>
               )
             }
-            </ul>
+            
           </div>
         </div>
       </nav>
