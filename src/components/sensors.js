@@ -12,7 +12,7 @@ export default (props) => {
       {
         _.map(props.sensors, (sensor) => <li
         className="list-group-item d-flex justify-content-between align-items-center list-group-item-fade"
-        key={sensor.name}>{sensor.name} <span className="badge badge-success badge-pill">{sensor.value}</span></li>)
+        key={sensor.name}>{sensor.name} <span className="badge-pill badge progress-bar-success">{sensor.value}</span></li>)
       }
     </ul>
   )

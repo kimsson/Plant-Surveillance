@@ -12,12 +12,12 @@ export default (props) => {
   return (
     <ul className="list-group">
       {
-        _.map(props.switches, (pswitch) => <button
+        _.map(props.switches, (pswitch) => <li
         className="list-group-item d-flex justify-content-between align-items-center list-group-item-fade"
         key={pswitch.name}
         type="button"
         onClick={props.onClick.bind(this, pswitch.id, !pswitch.value)}>{pswitch.name}
-        <span className="badge badge-danger">{toggleValue(pswitch.value)}</span></button>)
+        <span className="badge progress-bar-danger">{toggleValue(pswitch.value)}</span></li>)
       }
     </ul>
   )

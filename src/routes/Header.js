@@ -22,7 +22,7 @@ class  Header extends Component {
             </button>
 
             <Link className="navbar-brand" to="/">
-              Plant
+              Plant Surveillance
             </Link>
           </div>
           <div className="collapse navbar-collapse" id="myNavbar">
@@ -31,11 +31,12 @@ class  Header extends Component {
 
               this.props.user  === null ? (
                 <li>
+                  z
                   <Link to="/login">login</Link>
                 </li>
               ) : (
                 <li>
-                  <Link to="/" onClick={() => this.props.logout()}>logout</Link>
+                  <Link to="/" onClick={() => this.props.logout()}><img className="avtar img-circle" width="24px" height="24" src={this.props.user.photoURL}/><span> - logout</span></Link>
                 </li>
               )
             }

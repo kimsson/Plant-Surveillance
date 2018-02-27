@@ -22,14 +22,14 @@ class Login extends Component {
             <h1>PLANT | { new Date().getFullYear() }</h1>
             <h2>Login with your favourite <b>Social Network</b> to start</h2>
           </div>
-          <div className="col-sm-4 text-center">
+          <div className="col-sm-6 text-center">
             <button
-            className="btn btn-danger btn-lgn"
+            className="btn btn-danger btn-group-lg btn-lgn"
             onClick={this.props.googleLogin}>Login with Google</button>
           </div>
           <br />
-          <div className="col-sm-4 text-center">
-            <button className="btn btn-success btn-lgn"
+          <div className="col-sm-6  text-center">
+            <button className="btn btn-success btn-group-lg btn-lgn"
             onClick={this.props.twitterLogin}>Login with Twitter</button>
           </div>
         </div>

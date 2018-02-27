@@ -26,8 +26,8 @@ class App extends Component {
     })
   }
   onSwitchClick = (id, value) => {
-    value = (value) ? 1 : 0
-    console.log('onSwitchClick ', value);
+    
+    value = (value) ? 1 : 0;
     this.props.toggleSwitchValue(id, value)
   }
   render() {
@@ -35,11 +35,13 @@ class App extends Component {
       <div className="container-fluid">
         <div className="row">
           <div className="col-sm-6 col-sm-offset-3">
+            <h3>Active sensors</h3>
             <ul className="list-group list-group-sensors">
               <Sensors sensors={this.props.sensors} />
             </ul>
           </div>
           <div className="col-sm-6 col-sm-offset-3">
+            <h3>Manual switches</h3>
             <ul className="list-group list-group-sensors">
               <Switches switches={this.props.switches} onClick={this.onSwitchClick}/>
             </ul>
