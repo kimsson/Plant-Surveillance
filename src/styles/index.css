@@ -5,6 +5,7 @@ body {
   font-family: 'Nunito', sans-serif;
   background: url("/assets/images/larm-rmah-273854.jpg");
   background-size: cover;
+  background-position: 50% 0;
   background-repeat: no-repeat;
   min-height: 100%;
   color: white;
