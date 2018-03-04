@@ -37,7 +37,7 @@ class Sensor extends Component {
     }
     
     return (
-      <div className="container">
+      <div className="container-fluid">
           <h2>{this.state.logs[0].name}</h2>
           <Link to="/">&#171; back</Link>
         <ul className="list-group">
