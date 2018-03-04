@@ -6,3 +6,6 @@ export const GET_SENSORS = 'GET_SENSORS';
 export const SENSORS_STATUS = 'SENSORS_STATUS';
 export const GET_USER = 'GET_USER';
 export const USER_STATUS = 'USER_STATUS';
+
+export const LOGS_STATUS = 'LOGS_STATUS';
+export const GET_LOGS = 'GET_LOGS';

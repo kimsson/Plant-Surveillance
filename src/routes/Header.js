@@ -4,9 +4,7 @@ import { connect } from 'react-redux';
 import { getUser, logout } from '../actions/userAction';
 
 class  Header extends Component {
-  constructor(props){
-    super(props);
-  }
+  
   render() {
     return (
       <nav className="navbar navbar-default">
@@ -39,7 +37,7 @@ class  Header extends Component {
                 <ul className="nav navbar-nav navbar-right">
                 <li className="breadcrumb-item"><Link to="/">Surveillance</Link></li>
                 <li className="breadcrumb-item"><Link to="/">How</Link></li>
-                <li className="breadcrumb-item"><Link to="/" onClick={() => this.props.logout()}><span>Logout  </span><img className="avtar img-circle" width="24px" height="24" src={this.props.user.photoURL}/></Link></li>
+                <li className="breadcrumb-item"><Link to="/" onClick={() => this.props.logout()}><span>Logout  </span><img className="avtar img-circle" alt="" width="24px" height="24" src={this.props.user.photoURL}/></Link></li>
                 </ul>
               )
             }

@@ -13,7 +13,8 @@ import rootReducer from './reducers/';
 import { BrowserRouter, Switch, Route} from 'react-router-dom'
 
 import App from './components/App';
-import Login from './components/Login'
+import Login from './components/Login';
+import Sensor from './components/sensor';
 import LoadingComponent from './components/LoadingComponent';
 import Header from './routes/Header';
 import AuthenticatedComponent from './components/AuthenticatedComponent'
@@ -33,6 +34,7 @@ ReactDOM.render(
             <AuthenticatedComponent>
               <Header />
               <Route path="/" component={App} exact={true} />
+              <Route path="/:id" component={Sensor} exact={true} />
             </AuthenticatedComponent>
           </Switch>
         </div>

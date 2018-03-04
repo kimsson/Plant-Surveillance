@@ -3,12 +3,14 @@ import switchesReducer from './switchesReducer';
 import sensorsReducer from './sensorsReducer';
 import userReducer from './userReducer';
 import loadingReducer from './loadingReducer';
+import logsReducer from './logsReducer';
 
 const rootReducer = combineReducers({
   switches: switchesReducer,
   sensors: sensorsReducer,
   user: userReducer,
-  loading: loadingReducer
+  loading: loadingReducer,
+  logs: logsReducer
 
 });
 

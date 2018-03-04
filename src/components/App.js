@@ -12,23 +12,13 @@ import Switches from './switches';
 
 
 class App extends Component {
-  renderSensors () {
-    const { sensors } = this.props
-
-    return _.map(sensors, (sensor, key) => {
-      return (
-        <li className="list-group-item d-flex justify-content-between align-items-center list-group-item-fade"
-          key={key}>{sensor.name}
-          <span className="badge badge-success badge-pill">{sensor.value}
-          </span>
-        </li>
-      )
-    })
-  }
+  
   onSwitchClick = (id, value) => {
-    
     value = (value) ? 1 : 0;
     this.props.toggleSwitchValue(id, value)
+  }
+  onSensorClick = (id) => {
+    this.props.toggleSwitchValue(id)
   }
   render() {
     return (
@@ -37,7 +27,7 @@ class App extends Component {
           <div className="col-sm-6 col-sm-offset-3">
             <h3>Active sensors</h3>
             <ul className="list-group list-group-sensors">
-              <Sensors sensors={this.props.sensors} />
+              <Sensors sensors={this.props.sensors} onClick={this.onSensorClick} />
             </ul>
           </div>
           <div className="col-sm-6 col-sm-offset-3">
