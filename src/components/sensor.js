@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import Chart from './Chart';
+
 import _ from 'lodash';
 import moment from 'moment';
 import { Link } from 'react-router-dom';
@@ -7,12 +9,14 @@ import { Link } from 'react-router-dom';
 import { getLogs } from '../actions/logAction';
 
 class Sensor extends Component {
-  
+
   constructor(props) {
     super(props);
-    
+
     this.state = {
-      logs: null
+      logs: null,
+      chartLabels: [],
+      chartData: []
     }
   }
   componentDidMount() {
@@ -29,17 +33,29 @@ class Sensor extends Component {
         // if (nextProps.notesLoading === -1 && nextProps.user !== null) {
         //     this.props.getNotes();
         // }
+
+        let chartData = _.map(logs.doc, (data) => { return data.value });
+        let chartLabels = _.map(logs.doc, (data) => { return moment(data.createdAt).format('MMMM Do h a') });
+
+        this.state.chartLabels = chartLabels;
+        this.state.chartData = chartData;
+        this.setState({
+          chartLabels,
+          chartData
+        })
+        console.log(this.state);
     }
-  
+
   render() {
     if(!this.state.logs) {
       return(<div className="container">Getting sensors data</div>)
     }
-    
+
     return (
       <div className="container-fluid">
-          <h2>{this.state.logs[0].name}</h2>
-          <Link to="/">&#171; back</Link>
+        <h2>{this.state.logs[0].name}</h2>
+        <Link to="/">&#171; back</Link>
+        <Chart chartData={this.state.chartData} chartLabels={this.state.chartLabels} labels/>
         <ul className="list-group">
           {
             _.map(this.state.logs, (log, key) => <li

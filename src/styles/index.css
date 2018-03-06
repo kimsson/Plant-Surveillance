@@ -3,7 +3,8 @@ html {
 }
 body {
   font-family: 'Nunito', sans-serif;
-  background: url("/assets/images/larm-rmah-273854.jpg");
+  /* background: url("/assets/images/larm-rmah-273854.jpg"); */
+  background-color: rgba(255, 0, 0, 0.5);
   background-size: cover;
   background-position: 50% 0;
   background-repeat: no-repeat;
@@ -36,6 +37,10 @@ a:hover {
   background: none;
 }
 
+.chart{
+  with: 100%;
+  height: auto;
+}
 
 .input-group {
   margin: 40px 0;
