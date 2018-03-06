@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { googleLogin, twitterLogin } from '../actions/userAction';
+import { googleLogin, twitterLogin, facebookLogin } from '../actions/userAction';
 
 class Login extends Component {
   componentWillMount() {
@@ -22,15 +22,20 @@ class Login extends Component {
             <h1>PLANT | { new Date().getFullYear() }</h1>
             <h2>Login with your favourite <b>Social Network</b> to start</h2>
           </div>
-          <div className="col-sm-6 text-center">
+          <div className="col-sm-4 text-center">
             <button
             className="btn btn-danger btn-group-lg btn-lgn"
-            onClick={this.props.googleLogin}>Login with Google</button>
+            onClick={this.props.googleLogin}>Login Google</button>
           </div>
           <br />
-          <div className="col-sm-6  text-center">
+          <div className="col-sm-4 text-center">
             <button className="btn btn-success btn-group-lg btn-lgn"
-            onClick={this.props.twitterLogin}>Login with Twitter</button>
+            onClick={this.props.twitterLogin}>Login Twitter</button>
+          </div>
+          <br />
+          <div className="col-sm-4 text-center">
+            <button className="btn btn-primary btn-group-lg btn-lgn"
+            onClick={this.props.facebookLogin}>Login Facebook</button>
           </div>
         </div>
       </div>
@@ -43,4 +48,4 @@ function mapStateToProps(state, ownProps) {
   };
 }
 
-export default connect(mapStateToProps, { googleLogin, twitterLogin})(Login);
+export default connect(mapStateToProps, { googleLogin, twitterLogin, facebookLogin})(Login);
