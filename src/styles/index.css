@@ -1,10 +1,47 @@
 html {
   height: 100%;
 }
+/* --alabaster: #f8f8f8;
+    --athens-gray: #f0f0f0;
+    --wild-sand: #f4f4f4;
+    --rolling-stone: #788487;
+    --mine-shaft: #333;
+    --blue: #007bff;
+    --indigo: #6610f2;
+    --purple: #6f42c1;
+    --pink: #e83e8c;
+    --red: #dc3545;
+    --orange: #fd7e14;
+    --yellow: #ffc107;
+    --green: #28a745;
+    --teal: #20c997;
+    --cyan: #17a2b8;
+    --white: #fff;
+    --gray: #6c757d;
+    --gray-dark: #343a40;
+    --black: #222;
+    --brand: #505cfd;
+    --new-gray: #d8d8d8;
+    --new-white: #fff;
+    --primary: #007bff;
+    --secondary: #6c757d;
+    --success: #28a745;
+    --info: #17a2b8;
+    --warning: #ffc107;
+    --danger: #dc3545;
+    --light: #f8f9fa;
+    --dark: #343a40; */
+
 body {
   font-family: 'Nunito', sans-serif;
-  background: url("/assets/images/larm-rmah-273854.jpg");
+  /* background: url("/assets/images/larm-rmah-273854.jpg"); */
   /* background-color: rgba(255, 0, 0, 0.5); */
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#505cfd+0,20c997+100 */
+  background: #505cfd; /* Old browsers */
+  background: -moz-linear-gradient(-45deg, #505cfd 0%, #20c997 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg, #505cfd 0%,#20c997 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg, #505cfd 0%,#20c997 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#505cfd', endColorstr='#20c997',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
   background-size: cover;
   background-position: 50% 0;
   background-repeat: no-repeat;

@@ -35,7 +35,7 @@ class Sensor extends Component {
         // }
 
         let chartData = _.map(logs.doc, (data) => { return data.value });
-        let chartLabels = _.map(logs.doc, (data) => { return moment(data.createdAt).format('MMMM Do h a') });
+        let chartLabels = _.map(logs.doc, (data) => { return moment(data.createdAt).format('MM D h a') });
 
         this.state.chartLabels = chartLabels;
         this.state.chartData = chartData;
@@ -52,9 +52,10 @@ class Sensor extends Component {
     }
 
     return (
-      <div className="container-fluid">
+      <div className="container-fluid bg-gradient-info text-white">
+      <Link to="/">{`Retun to surveillance`}</Link>
         <h2>{this.state.logs[0].name}</h2>
-        <Link to="/">&#171; back</Link>
+        <br />
         <Chart chartData={this.state.chartData} chartLabels={this.state.chartLabels} labels/>
         <ul className="list-group">
           {

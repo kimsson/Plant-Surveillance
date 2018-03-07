@@ -31,6 +31,7 @@ class Chart extends Component {
           pointHoverBorderWidth: 2,
           pointRadius: 1,
           pointHitRadius: 10,
+          fontColor: 'red',
           data: props.chartData,
 
         }]
@@ -62,7 +63,14 @@ class Chart extends Component {
             },
             label: {
               display: false
-            }
+            },
+            xAxes: [
+              {
+                ticks: {
+                  autoSkip: false
+                }
+              }
+            ]
           }} />
       </div>
     )
