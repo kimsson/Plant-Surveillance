@@ -47,10 +47,10 @@ class Chart extends Component {
       <div className="chart">
         <Bar
           data={this.state.chartData}
-          width={100}
-          height={50}
+          width={50}
+          height={300}
           options={{
-            maintainAspectRatio: true,
+            maintainAspectRatio: false,
             title: {
               display: false,
               text: 'title',

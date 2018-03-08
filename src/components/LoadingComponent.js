@@ -6,6 +6,8 @@ import { getUser } from '../actions/userAction';
 import { getSwithes } from '../actions/switchesAction';
 import { getSensors } from '../actions/sensorsAction';
 
+import Loader from './Loader';
+
 class LoadingComponent extends Component {
     componentWillMount() {
         const { userLoading, switchesLoading, sensorsLoading } = this.props;
@@ -18,7 +20,7 @@ class LoadingComponent extends Component {
         if (switchesLoading === undefined) {
             this.props.getSwithes();
         }
-        
+
         // if we havent tried to get sensors, load notes
         if (sensorsLoading === undefined) {
             this.props.getSensors();
@@ -46,8 +48,8 @@ class LoadingComponent extends Component {
             return <div>{children}</div>;
         } else {
             return (
-                <div>
-                    <h2>Loading...</h2>
+                <div className="container-fluid">
+                    <Loader />
                 </div>
             );
         }

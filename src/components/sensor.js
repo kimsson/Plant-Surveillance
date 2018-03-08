@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Chart from './Chart';
+import Loader from './Loader';
 
 import _ from 'lodash';
 import moment from 'moment';
@@ -35,7 +36,7 @@ class Sensor extends Component {
         // }
 
         let chartData = _.map(logs.doc, (data) => { return data.value });
-        let chartLabels = _.map(logs.doc, (data) => { return moment(data.createdAt).format('MM D h a') });
+        let chartLabels = _.map(logs.doc, (data) => { return moment(data.createdAt).format('h a') });
 
         this.state.chartLabels = chartLabels;
         this.state.chartData = chartData;
@@ -48,7 +49,7 @@ class Sensor extends Component {
 
   render() {
     if(!this.state.logs) {
-      return(<div className="container">Getting sensors data</div>)
+      return(<div className="container-fluid"><Loader /></div>)
     }
 
     return (
