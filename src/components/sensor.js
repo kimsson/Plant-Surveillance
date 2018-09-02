@@ -38,8 +38,6 @@ class Sensor extends Component {
         let chartData = _.map(logs.doc, (data) => { return data.value });
         let chartLabels = _.map(logs.doc, (data) => { return moment(data.createdAt).format('h a') });
 
-        this.state.chartLabels = chartLabels;
-        this.state.chartData = chartData;
         this.setState({
           chartLabels,
           chartData

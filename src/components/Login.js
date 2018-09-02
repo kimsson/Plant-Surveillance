@@ -21,7 +21,7 @@ class Login extends Component {
         <div className="row">
           <div className="col-sm-12 jumbotron" style={{marginTop:'-20px'}}>
             <h1>PLANT Surveillance</h1>
-            <h2>{moment(new Date).format('MMMM Do')}</h2>
+            <h2>{moment(new Date()).format('MMMM Do')}</h2>
             <h4>Login with your favourite <b>Social Network</b> to start surveillance</h4>
           </div>
           <div className="col-sm-4 text-center">
